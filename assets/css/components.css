@@ -1,0 +1,41 @@
+
+/*! components.css — botões, badges, alerts, toasts, modal, forms */
+.badge{display:inline-block; padding:.25rem .5rem; border-radius:999px; background:var(--brand-100); color:var(--brand-900); font-weight:700; font-size:var(--fs-xs)}
+
+.btn{display:inline-flex; align-items:center; gap:.4rem; padding:.7rem 1rem; border-radius:.6rem; font-weight:700; border:1px solid transparent; cursor:pointer}
+.btn:disabled{opacity:.6; cursor:not-allowed}
+.btn.primary{background:var(--brand-700); color:#fff}
+.btn.primary:hover{filter:brightness(1.05)}
+.btn.primary:active{transform:translateY(1px)}
+.btn.secondary{background:#fff; color:var(--brand-700); border-color:var(--brand-700)}
+.btn.secondary:hover{background:var(--brand-50)}
+.btn.ghost{background:transparent; color:var(--text); border-color:var(--border)}
+.btn.ghost:hover{background:var(--surface)}
+
+.alert{display:flex; gap:.75rem; align-items:flex-start; padding:.75rem 1rem; border-radius:.6rem; border:1px solid}
+.alert.success{background:#ecfdf5; border-color:#a7f3d0; color:#065f46}
+.alert.info{background:#eff6ff; border-color:#bfdbfe; color:#1e3a8a}
+.alert.warning{background:#fffbeb; border-color:#fde68a; color:#7c2d12}
+.alert.danger{background:#fef2f2; border-color:#fecaca; color:#7f1d1d}
+
+.toast{position:fixed; right:1rem; bottom:1rem; background:#111827; color:#fff; padding:.75rem 1rem; border-radius:.75rem; box-shadow:var(--shadow-2); opacity:0; transform:translateY(8px); pointer-events:none; transition:.25s}
+.toast.show{opacity:1; transform:translateY(0); pointer-events:auto}
+
+.modal-backdrop{position:fixed; inset:0; background:rgba(0,0,0,.5); display:none; align-items:center; justify-content:center; padding:1rem}
+.modal{background:#fff; border-radius:1rem; max-width:560px; width:100%; padding:1rem; box-shadow:var(--shadow-2); border:1px solid var(--border)}
+.modal header{border-bottom:1px solid var(--border); margin-bottom:.75rem}
+.modal footer{border-top:1px solid var(--border); margin-top:.75rem; padding-top:.75rem}
+.modal-backdrop.open{display:flex}
+
+form{display:grid; gap:1rem; max-width:850px}
+fieldset{border:1px solid var(--border); border-radius:.75rem; padding:1rem}
+legend{padding:0 .5rem; font-weight:700}
+label{display:block; font-weight:600; margin-bottom:.25rem}
+input, select, textarea{width:100%; padding:.7rem .8rem; border:1px solid var(--border); border-radius:.6rem; font-size:1rem; background:#fff}
+input:focus, select:focus, textarea:focus{outline-color:var(--sec-500); border-color:var(--sec-500)}
+input:valid{border-color:var(--success)}
+input:invalid{border-color:var(--danger)}
+.helper{font-size:var(--fs-xs); color:var(--muted)}
+
+.progresso{height:10px; background:#eee; border-radius:999px; overflow:hidden}
+.progresso > div{height:100%; width:40%; background:var(--brand-500)}

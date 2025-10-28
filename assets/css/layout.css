@@ -1,0 +1,48 @@
+
+/*! layout.css — Grid 12 col, header/nav, breakpoints */
+header{background:var(--surface); border-bottom:1px solid var(--border)}
+.topbar{display:flex; align-items:center; justify-content:space-between; gap:.5rem; padding:.75rem 0}
+.brand{display:flex; align-items:center; gap:.5rem; font-weight:800}
+.brand span.logo{display:inline-grid; place-items:center; width:36px; height:36px; border-radius:50%; background:var(--brand-700); color:#fff}
+
+nav{position:relative}
+.nav-list{list-style:none; margin:0; padding:0; display:flex; gap:.25rem; align-items:center}
+.nav-list > li{position:relative}
+.nav-link{padding:.5rem .75rem; border-radius:.5rem; font-weight:600; display:inline-flex; align-items:center; gap:.25rem}
+.nav-link:hover{background:var(--brand-50)}
+.nav-link[aria-current="page"]{background:var(--brand-700); color:#fff}
+
+.dropdown{position:absolute; top:calc(100% + .25rem); left:0; background:#fff; border:1px solid var(--border); border-radius:.75rem; box-shadow:var(--shadow-2); min-width:220px; padding:.5rem; display:none; z-index:50}
+.dropdown a{display:block; padding:.5rem .75rem; border-radius:.5rem}
+.dropdown a:hover{background:var(--surface)}
+.has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown{display:block}
+
+.nav-toggle{display:none; background:none; border:1px solid var(--border); padding:.5rem .6rem; border-radius:.6rem}
+.nav-toggle[aria-expanded="true"]{background:var(--brand-50)}
+.mobile-nav{display:none}
+.mobile-nav.open{display:block}
+.mobile-nav ul{list-style:none; padding:0; margin:var(--sp-1) 0; display:grid; gap:.25rem}
+.mobile-nav a{padding:.65rem .75rem; border-radius:.6rem; display:block}
+.mobile-nav .sub{padding-left:1rem}
+
+.row{display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:1rem}
+.span-12{grid-column:span 12} .span-8{grid-column:span 8} .span-6{grid-column:span 6} .span-4{grid-column:span 4} .span-3{grid-column:span 3}
+
+.hero{background:linear-gradient(180deg, rgba(46,125,50,.08), transparent); padding:var(--sp-3) 0 var(--sp-2)}
+.card{background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg); padding:var(--sp-2); box-shadow:var(--shadow-1)}
+footer{margin-top:var(--sp-3); background:var(--surface); border-top:1px solid var(--border)}
+.foot{display:grid; gap:1rem; padding:1rem 0}
+
+@media (max-width: 1280px){ .container{max-width:1060px} }
+@media (max-width: 1024px){ .span-8{grid-column:span 12} }
+@media (max-width: 768px){
+  .nav-list{display:none}
+  .nav-toggle{display:inline-flex; align-items:center; gap:.5rem}
+  .row{grid-template-columns:repeat(6, 1fr)}
+  .span-6{grid-column:span 6} .span-4{grid-column:span 6} .span-3{grid-column:span 3}
+}
+@media (max-width: 480px){
+  .row{grid-template-columns:repeat(4, 1fr)}
+  .span-3{grid-column:span 4}
+}
+@media (max-width: 360px){ .container{padding:0 .75rem} }

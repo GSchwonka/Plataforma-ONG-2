@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ONG Exemplo — Início</title>
+  <meta name="description" content="Plataforma para ONGs: projetos, voluntariado, doações e transparência.">
+  <meta property="og:title" content="ONG Exemplo — Início">
+  <meta property="og:description" content="Plataforma para ONGs: projetos, voluntariado, doações e transparência.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+  <header>
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true">O</span> <span>ONG Exemplo</span>
+      </a>
+      <button class="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menu">☰ Menu</button>
+      <nav aria-label="principal">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Início</a></li>
+          <li class="has-dropdown">
+            <a class="nav-link" href="projetos.html">Projetos ▼</a>
+            <div class="dropdown" role="menu" aria-label="submenu de projetos">
+              <a href="projetos.html#educacao">Educação</a>
+              <a href="projetos.html#saude">Saúde</a>
+              <a href="projetos.html#comunidade">Comunidade</a>
+            </div>
+          </li>
+          <li><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+        </ul>
+        <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li class="sub"><a href="projetos.html#educacao">• Educação</a></li>
+            <li class="sub"><a href="projetos.html#saude">• Saúde</a></li>
+            <li class="sub"><a href="projetos.html#comunidade">• Comunidade</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="container">
+        <figure><img src="assets/img/hero.jpg" alt="Voluntários em ação comunitária" width="1200" height="630"></figure>
+        <h1 id="titulo-hero">Missão, Visão e Valores</h1>
+        <p class="muted">Promovemos impacto social com foco em educação, saúde e cidadania.</p>
+        <p><span class="badge">Transparência</span> <span class="badge">Acessibilidade AA</span></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="sobre">
+      <div class="container row">
+        <h2 id="sobre" class="span-12">Sobre a organização</h2>
+        <article class="card span-4"><h3>Histórico e conquistas</h3><p>Impacto desde 2010 com projetos estruturados e relatórios anuais.</p></article>
+        <article class="card span-4"><h3>Equipe</h3><p>Time multidisciplinar comprometido com ética, inclusão e inovação.</p></article>
+        <article class="card span-4"><h3>Transparência</h3><p>Prestação de contas pública e metas atualizadas.</p>
+          <div class="progresso" aria-label="Meta de arrecadação"><div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container mt-3" aria-labelledby="comp-title">
+      <h2 id="comp-title">Componentes de Interface</h2>
+      <div class="row">
+        <div class="span-6">
+          <div class="card">
+            <h3>Botões</h3>
+            <p>
+              <button class="btn primary">Primário</button>
+              <button class="btn secondary">Secundário</button>
+              <button class="btn ghost">Ghost</button>
+              <button class="btn primary" disabled>Desabilitado</button>
+            </p>
+            <h3 class="mt-2">Feedback</h3>
+            <div class="alert success"><strong>Sucesso:</strong>&nbsp; Ação concluída.</div>
+            <div class="alert info mt-1"><strong>Info:</strong>&nbsp; Atualização disponível.</div>
+            <div class="alert warning mt-1"><strong>Aviso:</strong>&nbsp; Verifique os dados.</div>
+            <div class="alert danger mt-1"><strong>Erro:</strong>&nbsp; Algo deu errado.</div>
+            <p class="mt-2">
+              <button class="btn secondary" data-show-toast>Mostrar toast</button>
+              <button class="btn primary" data-open-modal>Abrir modal</button>
+            </p>
+          </div>
+        </div>
+        <div class="span-6">
+          <div class="card">
+            <h3>Badges & Tags</h3>
+            <p><span class="badge">Educação</span> <span class="badge">Saúde</span> <span class="badge">Comunidade</span></p>
+            <h3 class="mt-2">Formulário (estilos)</h3>
+            <form class="max-w-md">
+              <label for="demo-email">E-mail</label>
+              <input type="email" id="demo-email" required placeholder="exemplo@dominio.com">
+              <span class="helper">Validação nativa: verde se válido, vermelho se inválido.</span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" role="status" aria-live="polite">Ação realizada com sucesso!</div>
+    <div class="modal-backdrop" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <header><h3 id="modal-title">Janela Modal</h3></header>
+        <div class="content"><p>Exemplo de modal acessível.</p></div>
+        <footer class="text-right">
+          <button class="btn ghost" data-close-modal>Fechar</button>
+          <button class="btn primary" data-close-modal>Confirmar</button>
+        </footer>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    <div class="container foot">
+      <p><small>© 2025 ONG Exemplo — CNPJ 00.000.000/0001-00 — Todos os direitos reservados.</small></p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

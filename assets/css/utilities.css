@@ -1,0 +1,6 @@
+
+/*! utilities.css — helpers e estados */
+.hide{display:none !important} .center{display:grid; place-items:center}
+.text-center{text-align:center} .max-w-md{max-width:680px} .w-full{width:100%}
+.z-10{z-index:10} .z-50{z-index:50} .shadow-1{box-shadow:var(--shadow-1)} .shadow-2{box-shadow:var(--shadow-2)}
+.rounded{border-radius:var(--radius-md)} .surface{background:var(--surface)} .border{border:1px solid var(--border)}

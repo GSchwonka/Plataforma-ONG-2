@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ONG Exemplo — Projetos</title>
+  <meta name="description" content="Projetos sociais, voluntariado e doações.">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+  <header>
+    <div class="container topbar">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true">O</span> <span>ONG Exemplo</span>
+      </a>
+      <button class="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menu">☰ Menu</button>
+      <nav aria-label="principal">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Início</a></li>
+          <li class="has-dropdown">
+            <a class="nav-link" href="projetos.html">Projetos ▼</a>
+            <div class="dropdown" role="menu" aria-label="submenu de projetos">
+              <a href="projetos.html#educacao">Educação</a>
+              <a href="projetos.html#saude">Saúde</a>
+              <a href="projetos.html#comunidade">Comunidade</a>
+            </div>
+          </li>
+          <li><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+        </ul>
+        <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li class="sub"><a href="projetos.html#educacao">• Educação</a></li>
+            <li class="sub"><a href="projetos.html#saude">• Saúde</a></li>
+            <li class="sub"><a href="projetos.html#comunidade">• Comunidade</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="container" aria-labelledby="titulo">
+      <h1 id="titulo">Projetos sociais</h1>
+      <p class="muted">Conheça nossos programas e como apoiar.</p>
+      <div class="row">
+        <article id="educacao" class="card span-4">
+          <figure><img src="assets/img/projeto1.jpg" alt="Aula de reforço com crianças"></figure>
+          <h3>Educação que Transforma</h3>
+          <p>Aulas de reforço e oficinas de tecnologia para crianças e adolescentes.</p>
+          <p><strong>Doar:</strong> Materiais escolares, notebooks usados, doação financeira.</p>
+          <p><strong>Voluntariado:</strong> Mentoria, reforço escolar, oficinas.</p>
+        </article>
+        <article id="saude" class="card span-4">
+          <figure><img src="assets/img/projeto2.jpg" alt="Ação de saúde comunitária"></figure>
+          <h3>Saúde em Dia</h3>
+          <p>Mutirões de saúde com orientação, triagem e encaminhamentos.</p>
+          <p><strong>Doar:</strong> Kits de higiene, doação financeira.</p>
+          <p><strong>Voluntariado:</strong> Profissionais e estudantes de saúde.</p>
+        </article>
+        <article id="comunidade" class="card span-4">
+          <figure><img src="assets/img/galeria1.jpg" alt="Ação comunitária de limpeza"></figure>
+          <h3>Comunidade Viva</h3>
+          <p>Ações mensais de cidadania, limpeza urbana e cultura.</p>
+          <p><strong>Doar:</strong> Equipamentos, insumos e doação financeira.</p>
+          <p><strong>Voluntariado:</strong> Organização, comunicação e logística.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="transparencia">
+      <h2 id="transparencia">Metas e transparência</h2>
+      <p>Atualizamos publicamente nossas metas e a aplicação dos recursos arrecadados.</p>
+      <div class="card">
+        <p><strong>Meta de campanha atual:</strong> R$ 50.000</p>
+        <div class="progresso" aria-label="Progresso da campanha">
+          <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60" style="width:60%"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="container foot">
+      <p><small>© 2025 ONG Exemplo — CNPJ 00.000.000/0001-00 — Todos os direitos reservados.</small></p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
