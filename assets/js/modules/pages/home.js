@@ -1,0 +1,2 @@
+
+export default function home(){ return `<section aria-labelledby="spa-home"><h1 id="spa-home">Bem-vindo (SPA)</h1><p class="muted">Conteúdo dinâmico.</p><div class='row'><article class='card span-6'><h3>Ajude</h3><p><a class='btn' href='#/cadastro'>Quero me cadastrar</a></p></article><article class='card span-6'><h3>Projetos</h3><p><a class='btn' href='#/projetos'>Ver projetos</a></p></article></div></section>`; }
